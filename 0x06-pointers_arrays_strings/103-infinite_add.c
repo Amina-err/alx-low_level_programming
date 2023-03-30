@@ -44,7 +44,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		i++;
 	while (*(n2 + j) != '\0')
 		j++;
-i--;
+	i--;
 	j--;
 	if (j >= size_r || i >= size_r)
 		return (0);
@@ -58,7 +58,7 @@ i--;
 			val2 = 0;
 		else
 			val2 = *(n2 + j) - '0';
-temp_tot = val1 + val2 + overflow;
+		temp_tot = val1 + val2 + overflow;
 		if (temp_tot >= 10)
 			overflow = 1;
 		else
@@ -70,7 +70,7 @@ temp_tot = val1 + val2 + overflow;
 		j--;
 		i--;
 	}
-if (digits == size_r)
+	if (digits == size_r)
 		return (0);
 	*(r + digits) = '\0';
 	rev_string(r);
